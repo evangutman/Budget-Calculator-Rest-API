@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Budget Calculator</title>
+
+  </head>
+  <body>
+    <h3>Budget Calculator for <select id = "dateDrop" onchange="pollerCat()">
+    </select></h3>
+
+
+
+    <br>
+    <div style = "float:left;padding-left:50px">
+    <h2>Budget Categories</h2>
+    <table id="theTable">
+    </table>
+    </div>
+
+    <div style = "float:right;padding-right:50px">
+    <form id = "addCat">
+      <fieldset>
+        <legend><b>Add New Category:</b></legend>
+        Category Name:<br>
+        <input type = "text" id = "newCat" name = "" value = "" /><br>
+        Budget for Category ($):<br>
+        <input type = "text" id = "newBudget" name = "" value = "i.e. 500" /><br><br>
+        <input type = "button" id = "catButton" value = "Add" />
+      </fieldset>
+    </form>
+
+    <br><br>
+
+    <form id = "addPurchase">
+      <fieldset>
+        <legend><b>Add New Purchase:</b></legend>
+        Category:<select id = "catDrop">
+        </select><br>
+        <br>
+        Spent Money on:</br>
+        <input type = "text" id = "whatBought" name = "" value = "" /><br>
+        Amount Spent ($):<br>
+        <input type = "text" id = "amountSpent" name = "" value = "i.e. 200" /><br>
+        Date Spent:<br>
+        <input type = "date" id = "dop" name = "" value = "" /><br><br>
+        <input type = "button" id = "purButton" value = "Add" />
+      </fieldset>
+    </form>
+    </div>
+
+  </body>
+  <script type = "text/javascript" src = "{{ url_for('static', filename='script.js' )}}"></script>
+</html>
